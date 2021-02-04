@@ -30,6 +30,14 @@ public class claseB extends ClaseA {
 
     }
     
+    public void expectativas(){
+        if(cilindrada>1900){
+            System.out.println("Novea loco eso tiene que corre");
+        }else{
+            System.out.println("Novea que castaña");
+        }
+    }
+    
     public void subidaConsumo(){
         if(cilindrada>1500){
             double subida = super.getConsumo()*1.20;
