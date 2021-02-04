@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author NitroPc
  */
 public class ClaseA {
-     
+
     private String marca;
     private String modelo;
     private int potencia;
@@ -26,12 +26,16 @@ public class ClaseA {
         this.nivelDeposito = nivelDeposito;
         this.consumo = consumo;
     }
-    
-    public void kilometrosRecorrido(double km){
-        double consumido = (km * consumo)/100; 
-        if((this.nivelDeposito=- consumido)>0){
-            this.nivelDeposito=-consumido;
+
+    public void kilometrosRecorrido(double km) {
+        double consumido = (km * consumo) / 100;
+        if ((this.nivelDeposito -= consumido) > 0) {
+            this.nivelDeposito -= consumido;
+            System.out.println("Se han realizado los km indicados en la motocicleta");
+        } else {
+            System.out.println("No se han podidio realizar los km indicados, ya que no hay conbustible suficiente en la motocicleta");
         }
+
     }
 
     public String getMarca() {
@@ -58,19 +62,19 @@ public class ClaseA {
         this.potencia = potencia;
     }
 
-    public float getNivelDeposito() {
+    public double getNivelDeposito() {
         return nivelDeposito;
     }
 
-    public void setNivelDeposito(float nivelDeposito) {
+    public void setNivelDeposito(double nivelDeposito) {
         this.nivelDeposito = nivelDeposito;
     }
 
-    public float getConsumo() {
+    public double getConsumo() {
         return consumo;
     }
 
-    public void setConsumo(float consumo) {
+    public void setConsumo(double consumo) {
         this.consumo = consumo;
     }
 
@@ -81,12 +85,12 @@ public class ClaseA {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 53 * hash + Objects.hashCode(this.marca);
-        hash = 53 * hash + Objects.hashCode(this.modelo);
-        hash = 53 * hash + this.potencia;
-        hash = 53 * hash + Float.floatToIntBits(this.nivelDeposito);
-        hash = 53 * hash + Float.floatToIntBits(this.consumo);
+        int hash = 3;
+        hash = 89 * hash + Objects.hashCode(this.marca);
+        hash = 89 * hash + Objects.hashCode(this.modelo);
+        hash = 89 * hash + this.potencia;
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.nivelDeposito) ^ (Double.doubleToLongBits(this.nivelDeposito) >>> 32));
+        hash = 89 * hash + (int) (Double.doubleToLongBits(this.consumo) ^ (Double.doubleToLongBits(this.consumo) >>> 32));
         return hash;
     }
 
@@ -105,10 +109,10 @@ public class ClaseA {
         if (this.potencia != other.potencia) {
             return false;
         }
-        if (Float.floatToIntBits(this.nivelDeposito) != Float.floatToIntBits(other.nivelDeposito)) {
+        if (Double.doubleToLongBits(this.nivelDeposito) != Double.doubleToLongBits(other.nivelDeposito)) {
             return false;
         }
-        if (Float.floatToIntBits(this.consumo) != Float.floatToIntBits(other.consumo)) {
+        if (Double.doubleToLongBits(this.consumo) != Double.doubleToLongBits(other.consumo)) {
             return false;
         }
         if (!Objects.equals(this.marca, other.marca)) {
@@ -121,6 +125,5 @@ public class ClaseA {
     }
 
     
-    
-    
+
 }
