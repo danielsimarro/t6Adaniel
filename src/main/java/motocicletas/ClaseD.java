@@ -70,6 +70,11 @@ public class ClaseD extends ClaseA{
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "ClaseD{" + "velocidadMaxima=" + velocidadMaxima + '}';
+    }
     
     
 }

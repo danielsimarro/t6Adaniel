@@ -70,6 +70,11 @@ public class ClaseC extends ClaseA {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "ClaseC{" + "peso=" + peso + '}';
+    }
+
     
     
     
