@@ -19,7 +19,7 @@ public class ClaseC extends claseB {
     }
 
     
-
+    //Metodos polimorficos
     @Override
     public void kilometrosRecorrido(double km) {
         double consumido = ((km * super.getConsumo()) / 100) - super.getNivelDeposito() ;
@@ -30,6 +30,15 @@ public class ClaseC extends claseB {
             System.out.println("No se han podidio realizar los km indicados, ya que no hay conbustible suficiente en la motocicleta");
         }
 
+    }
+    //Metodos polimorficos
+    @Override
+    public void expectativas(){
+        if(super.getCilindrada()>200){
+            System.out.println("Novea loco eso tiene que corre");
+        }else{
+            System.out.println("Novea que castaña");
+        }
     }
     
     public void nivelDepositoSubida(){
@@ -46,14 +55,14 @@ public class ClaseC extends claseB {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
+    //Metodos polimorficos
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 17 * hash + (int) (Double.doubleToLongBits(this.peso) ^ (Double.doubleToLongBits(this.peso) >>> 32));
         return hash;
     }
-
+    //Metodos polimorficos
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -71,7 +80,7 @@ public class ClaseC extends claseB {
         }
         return true;
     }
-
+    //Metodos polimorficos
     @Override
     public String toString() {
         return super.toString() +"ClaseC{" + "peso=" + peso + '}';

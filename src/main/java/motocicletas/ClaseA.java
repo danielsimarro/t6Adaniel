@@ -27,6 +27,7 @@ public class ClaseA {
         this.consumo = consumo;
     }
 
+    //Metodos polimorficos
     public void kilometrosRecorrido(double km) {
         double consumido = (km * consumo) / 100;
         if ((this.nivelDeposito -= consumido) > 0) {
@@ -82,7 +83,7 @@ public class ClaseA {
     public String toString() {
         return "ClaseA{" + "marca=" + marca + ", modelo=" + modelo + ", potencia=" + potencia + ", nivelDeposito=" + nivelDeposito + ", consumo=" + consumo + '}';
     }
-
+    //Metodos polimorficos
     @Override
     public int hashCode() {
         int hash = 3;
@@ -93,7 +94,7 @@ public class ClaseA {
         hash = 89 * hash + (int) (Double.doubleToLongBits(this.consumo) ^ (Double.doubleToLongBits(this.consumo) >>> 32));
         return hash;
     }
-
+    //Metodos polimorficos
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

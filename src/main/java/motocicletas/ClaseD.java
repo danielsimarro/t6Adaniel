@@ -18,7 +18,7 @@ public class ClaseD extends claseB{
     }
 
    
-
+    //Metodos polimorficos
     @Override
     public void kilometrosRecorrido(double km) {
         double consumido = ((km * super.getConsumo()) / 100) - super.getNivelDeposito() ;
@@ -30,10 +30,10 @@ public class ClaseD extends claseB{
         }
 
     }
-    
+    //Metodos polimorficos
     @Override
     public void expectativas(){
-        if(super.getCilindrada()>800){
+        if(super.getCilindrada()>2000){
             System.out.println("Novea loco eso tiene que corre");
         }else{
             System.out.println("Novea que castaña");
@@ -56,14 +56,14 @@ public class ClaseD extends claseB{
     public void setVelocidadmaxima(int velocidadmaxima) {
         this.velocidadMaxima = velocidadmaxima;
     }
-
+    //Metodos polimorficos
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 61 * hash + this.velocidadMaxima;
         return hash;
     }
-
+    //Metodos polimorficos
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -81,7 +81,7 @@ public class ClaseD extends claseB{
         }
         return true;
     }
-
+    //Metodos polimorficos
     @Override
     public String toString() {
         return super.toString() + "ClaseD{" + "velocidadMaxima=" + velocidadMaxima + '}';

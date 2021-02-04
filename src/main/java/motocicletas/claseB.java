@@ -17,7 +17,7 @@ public class claseB extends ClaseA {
         super(marca, modelo, potencia, nivelDeposito, consumo);
         this.cilindrada = cilindrada;
     }
-    
+    //Metodos polimorficos
     @Override
     public void kilometrosRecorrido(double km) {
         double consumido = ((km * super.getConsumo()) / 100) - super.getNivelDeposito() ;
@@ -52,7 +52,7 @@ public class claseB extends ClaseA {
     public void setCilindrada(int cilindrada) {
         this.cilindrada = cilindrada;
     }
-
+    //Metodos polimorficos
     @Override
     public String toString() {
         
@@ -61,14 +61,14 @@ public class claseB extends ClaseA {
 
     
 
-    
+    //Metodos polimorficos
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 37 * hash + this.cilindrada;
         return hash;
     }
-
+    //Metodos polimorficos
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
