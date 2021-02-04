@@ -9,14 +9,16 @@ package motocicletas;
  *
  * @author NitroPc
  */
-public class ClaseC extends ClaseA {
+public class ClaseC extends claseB {
     
     private double peso;
 
-    public ClaseC(double peso, String marca, String modelo, int potencia, double nivelDeposito, double consumo) {
-        super(marca, modelo, potencia, nivelDeposito, consumo);
+    public ClaseC(double peso, int cilindrada, String marca, String modelo, int potencia, double nivelDeposito, double consumo) {
+        super(cilindrada, marca, modelo, potencia, nivelDeposito, consumo);
         this.peso = peso;
     }
+
+    
 
     @Override
     public void kilometrosRecorrido(double km) {
@@ -72,7 +74,7 @@ public class ClaseC extends ClaseA {
 
     @Override
     public String toString() {
-        return super.toString() + "ClaseC{" + "peso=" + peso + '}';
+        return super.toString() +"ClaseC{" + "peso=" + peso + '}';
     }
 
     
