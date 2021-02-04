@@ -47,8 +47,11 @@ public class claseB extends ClaseA {
 
     @Override
     public String toString() {
-        return "claseB{" + "cilindrada=" + cilindrada + '}';
+        
+        return super.toString() + "claseB{" + "cilindrada=" + cilindrada + '}';
     }
+
+    
 
     
     @Override
