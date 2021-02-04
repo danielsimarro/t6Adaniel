@@ -33,7 +33,7 @@ public class ClaseD extends claseB{
     
     @Override
     public void expectativas(){
-        if(super.getCilindrada()>1900){
+        if(super.getCilindrada()>800){
             System.out.println("Novea loco eso tiene que corre");
         }else{
             System.out.println("Novea que castaña");
