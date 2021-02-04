@@ -9,13 +9,15 @@ package motocicletas;
  *
  * @author NitroPc
  */
-public class ClaseD extends ClaseA{
+public class ClaseD extends claseB{
     private int velocidadMaxima;
 
-    public ClaseD(int velocidadmaxima, String marca, String modelo, int potencia, double nivelDeposito, double consumo) {
-        super(marca, modelo, potencia, nivelDeposito, consumo);
+    public ClaseD(int velocidadMaxima, int cilindrada, String marca, String modelo, int potencia, double nivelDeposito, double consumo) {
+        super(cilindrada, marca, modelo, potencia, nivelDeposito, consumo);
         this.velocidadMaxima = velocidadMaxima;
     }
+
+   
 
     @Override
     public void kilometrosRecorrido(double km) {
@@ -27,6 +29,15 @@ public class ClaseD extends ClaseA{
             System.out.println("No se han podidio realizar los km indicados, ya que no hay conbustible suficiente en la motocicleta");
         }
 
+    }
+    
+    @Override
+    public void expectativas(){
+        if(super.getCilindrada()>1900){
+            System.out.println("Novea loco eso tiene que corre");
+        }else{
+            System.out.println("Novea que castaña");
+        }
     }
     
     public void segunVelocidad(){
